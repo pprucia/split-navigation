@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_flow_graph"
+    app:startDestination="@id/navigation_tab_red">
+
+    <fragment
+        android:id="@+id/navigation_tab_red"
+        android:name="pl.prucia.test.splitnavigation.red.RedFragment"
+        android:label="@string/red"
+        tools:layout="@layout/fragment_red">
+        <action
+            android:id="@+id/action_navigation_tab_red_to_yellowFragment"
+            app:destination="@id/yellowFragment" />
+        <action
+            android:id="@+id/action_navigation_tab_red_to_magentaFragment"
+            app:destination="@id/magentaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_tab_green"
+        android:name="pl.prucia.test.splitnavigation.green.GreenFragment"
+        android:label="@string/green"
+        tools:layout="@layout/fragment_green">
+        <action
+            android:id="@+id/action_navigation_tab_green_to_yellowFragment"
+            app:destination="@id/yellowFragment" />
+        <action
+            android:id="@+id/action_navigation_tab_green_to_cyanFragment"
+            app:destination="@id/cyanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_tab_blue"
+        android:name="pl.prucia.test.splitnavigation.blue.BlueFragment"
+        android:label="@string/blue"
+        tools:layout="@layout/fragment_blue">
+        <action
+            android:id="@+id/action_navigation_tab_blue_to_cyanFragment"
+            app:destination="@id/cyanFragment" />
+        <action
+            android:id="@+id/action_navigation_tab_blue_to_magentaFragment"
+            app:destination="@id/magentaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cyanFragment"
+        android:name="pl.prucia.test.splitnavigation.cyan.CyanFragment"
+        android:label="@string/cyan"
+        tools:layout="@layout/fragment_cyan" />
+    <fragment
+        android:id="@+id/magentaFragment"
+        android:name="pl.prucia.test.splitnavigation.magenta.MagentaFragment"
+        android:label="@string/magenta"
+        tools:layout="@layout/fragment_magenta" />
+    <fragment
+        android:id="@+id/yellowFragment"
+        android:name="pl.prucia.test.splitnavigation.yellow.YellowFragment"
+        android:label="@string/yellow"
+        tools:layout="@layout/fragment_yellow" />
+</navigation>

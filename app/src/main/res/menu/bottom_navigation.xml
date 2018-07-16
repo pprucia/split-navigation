@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_tab_red"
+        android:icon="@drawable/ic_navigation_red"
+        android:title="@string/red" />
+
+    <item
+        android:id="@+id/navigation_tab_green"
+        android:icon="@drawable/ic_navigation_green"
+        android:title="@string/green" />
+
+    <item
+        android:id="@+id/navigation_tab_blue"
+        android:icon="@drawable/ic_navigation_blue"
+        android:title="@string/blue" />
+</menu>

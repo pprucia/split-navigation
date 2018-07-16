@@ -1,0 +1,17 @@
+*~
+bin
+build
+out
+.build
+.gradle
+*.orig
+
+# OS generated files
+.DS_Store
+
+# IDE generated files
+.idea/
+*.iml
+*.ipr
+*.iws
+local.properties

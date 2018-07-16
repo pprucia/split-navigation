@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".blue.BlueFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/blue"
+        android:textColor="@android:color/white"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/mixBlueRed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mixWithRed" />
+
+        <Button
+            android:id="@+id/mixBlueGreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mixWithGreen" />
+
+    </LinearLayout>
+
+</FrameLayout>
