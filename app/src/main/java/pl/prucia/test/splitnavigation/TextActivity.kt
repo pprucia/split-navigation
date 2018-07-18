@@ -10,7 +10,7 @@ class TextActivity : BaseActivity() {
     override fun provideLayout() = R.layout.activity_text
 
     override fun provideAppBarConfig() = AppBarConfig.Builder()
-        .setActivityAppBar(appbar_default, View.VISIBLE)
+        .setActivityAppBar(appbar_default, View.GONE)
         .setActivityToolbar(toolbar_default)
         .build()
 
