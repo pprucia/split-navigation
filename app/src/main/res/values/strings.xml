@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SplitNavigation</string>
 
@@ -13,5 +14,63 @@
     <string name="mixWithRed">Mix with red</string>
     <string name="mixWithGreen">Mix with green</string>
     <string name="mixWithBlue">Mix with blue</string>
+
+    <string name="manu_text_title">Show text</string>
+    <string name="text_title">Long text</string>
+    <string name="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris imperdiet ex non fringilla auctor. Donec
+        tristique metus et dui rhoncus, ac convallis risus iaculis. Pellentesque sodales eros eu justo consequat, eget
+        dictum nunc consectetur. Donec a metus at neque luctus sodales. Mauris vitae massa placerat sem efficitur
+        maximus ut ut odio. Fusce ac dapibus enim, a laoreet nibh. Curabitur lorem lorem, varius id sodales nec, gravida
+        at nisi. Nulla facilisi. Donec finibus velit non orci venenatis efficitur. Fusce magna ligula, aliquam eget
+        rhoncus vel, ultrices blandit ante. Duis at lorem vel dui convallis lobortis sit amet vitae velit. In hac
+        habitasse platea dictumst. Proin interdum augue venenatis mauris malesuada, id hendrerit erat lacinia. Aenean
+        vel rhoncus nisi. Nulla vitae nunc nunc.
+
+        Maecenas tincidunt arcu quis lorem mattis consequat. Curabitur tincidunt lacus et est sollicitudin, in imperdiet
+        neque porttitor. Duis sagittis ipsum eget tempor congue. Nulla rutrum vestibulum ante, eu feugiat felis sagittis
+        et. Ut gravida rutrum purus vel malesuada. Nulla euismod, turpis ac dignissim varius, velit nunc feugiat massa,
+        id condimentum mi libero ut tortor. Sed pulvinar dolor ut ex dignissim scelerisque. Curabitur laoreet diam sed
+        sem pharetra, nec rutrum tortor cursus. Nam tristique nec metus non lacinia. Donec eget pellentesque urna. Nam
+        ac vehicula mauris. Vestibulum tincidunt lacus arcu, quis ultrices leo finibus at. In sit amet arcu eu urna
+        ullamcorper mollis non eget ligula. Pellentesque pulvinar pharetra dolor, et semper tortor malesuada in. Nunc
+        suscipit turpis eu arcu lacinia, eget dictum nunc venenatis.
+
+        Integer purus nulla, convallis vel magna at, fringilla semper metus. Mauris nec aliquam lorem. Ut sed pretium
+        ligula. Proin gravida, massa at feugiat rutrum, erat nisl luctus purus, sed commodo tellus purus sed erat.
+        Quisque consectetur sem id malesuada congue. Maecenas fringilla ornare risus, nec interdum nulla semper vitae.
+        Nullam tellus metus, fringilla ut fermentum placerat, lobortis ac sem. Fusce vehicula ipsum vitae mi ultricies,
+        quis suscipit mauris porttitor. Fusce ac tortor vel orci tincidunt ultrices quis sed massa. Morbi bibendum nec
+        sapien at molestie. Mauris convallis commodo metus at condimentum. Phasellus vestibulum, ligula lobortis
+        dignissim consectetur, urna neque efficitur ligula, ut malesuada velit tellus id lorem. Pellentesque ut nulla
+        tempus, facilisis arcu sed, fermentum dolor. Quisque suscipit semper maximus.
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris imperdiet ex non fringilla auctor. Donec
+        tristique metus et dui rhoncus, ac convallis risus iaculis. Pellentesque sodales eros eu justo consequat, eget
+        dictum nunc consectetur. Donec a metus at neque luctus sodales. Mauris vitae massa placerat sem efficitur
+        maximus ut ut odio. Fusce ac dapibus enim, a laoreet nibh. Curabitur lorem lorem, varius id sodales nec, gravida
+        at nisi. Nulla facilisi. Donec finibus velit non orci venenatis efficitur. Fusce magna ligula, aliquam eget
+        rhoncus vel, ultrices blandit ante. Duis at lorem vel dui convallis lobortis sit amet vitae velit. In hac
+        habitasse platea dictumst. Proin interdum augue venenatis mauris malesuada, id hendrerit erat lacinia. Aenean
+        vel rhoncus nisi. Nulla vitae nunc nunc.
+
+        Maecenas tincidunt arcu quis lorem mattis consequat. Curabitur tincidunt lacus et est sollicitudin, in imperdiet
+        neque porttitor. Duis sagittis ipsum eget tempor congue. Nulla rutrum vestibulum ante, eu feugiat felis sagittis
+        et. Ut gravida rutrum purus vel malesuada. Nulla euismod, turpis ac dignissim varius, velit nunc feugiat massa,
+        id condimentum mi libero ut tortor. Sed pulvinar dolor ut ex dignissim scelerisque. Curabitur laoreet diam sed
+        sem pharetra, nec rutrum tortor cursus. Nam tristique nec metus non lacinia. Donec eget pellentesque urna. Nam
+        ac vehicula mauris. Vestibulum tincidunt lacus arcu, quis ultrices leo finibus at. In sit amet arcu eu urna
+        ullamcorper mollis non eget ligula. Pellentesque pulvinar pharetra dolor, et semper tortor malesuada in. Nunc
+        suscipit turpis eu arcu lacinia, eget dictum nunc venenatis.
+
+        Integer purus nulla, convallis vel magna at, fringilla semper metus. Mauris nec aliquam lorem. Ut sed pretium
+        ligula. Proin gravida, massa at feugiat rutrum, erat nisl luctus purus, sed commodo tellus purus sed erat.
+        Quisque consectetur sem id malesuada congue. Maecenas fringilla ornare risus, nec interdum nulla semper vitae.
+        Nullam tellus metus, fringilla ut fermentum placerat, lobortis ac sem. Fusce vehicula ipsum vitae mi ultricies,
+        quis suscipit mauris porttitor. Fusce ac tortor vel orci tincidunt ultrices quis sed massa. Morbi bibendum nec
+        sapien at molestie. Mauris convallis commodo metus at condimentum. Phasellus vestibulum, ligula lobortis
+        dignissim consectetur, urna neque efficitur ligula, ut malesuada velit tellus id lorem. Pellentesque ut nulla
+        tempus, facilisis arcu sed, fermentum dolor. Quisque suscipit semper maximus.
+    </string>
 
 </resources>

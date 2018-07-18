@@ -1,5 +1,8 @@
 package pl.prucia.test.splitnavigation
 
+import android.content.Intent
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -27,5 +30,20 @@ class MainActivity : BaseActivity() {
 
         bottomNavigation.setupWithNavController(navController)
         bottomNavigation.isItemHorizontalTranslationEnabled = false
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_activity, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        return when (item?.itemId) {
+            R.id.menu_text -> {
+                startActivity(Intent(this, TextActivity::class.java))
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
