@@ -16,8 +16,7 @@ class CyanFragment : Fragment() {
 
     private lateinit var viewModel: CyanViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_cyan, container, false)
     }
 
@@ -25,5 +24,4 @@ class CyanFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(CyanViewModel::class.java)
     }
-
 }

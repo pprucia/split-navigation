@@ -16,8 +16,7 @@ class MagentaFragment : Fragment() {
 
     private lateinit var viewModel: MagentaViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_magenta, container, false)
     }
 
@@ -25,5 +24,4 @@ class MagentaFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(MagentaViewModel::class.java)
     }
-
 }

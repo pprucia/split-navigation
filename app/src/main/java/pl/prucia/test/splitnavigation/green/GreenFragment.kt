@@ -18,8 +18,7 @@ class GreenFragment : Fragment() {
 
     private lateinit var viewModel: GreenViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_green, container, false)
     }
 
@@ -42,5 +41,4 @@ class GreenFragment : Fragment() {
     private fun mixWithBlue(view: View) {
         view.findNavController().navigate(R.id.action_navigation_tab_green_to_cyanFragment)
     }
-
 }
