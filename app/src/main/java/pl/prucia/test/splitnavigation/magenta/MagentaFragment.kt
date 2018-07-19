@@ -1,27 +1,28 @@
 package pl.prucia.test.splitnavigation.magenta
 
 import android.arch.lifecycle.ViewModelProviders
-import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import pl.prucia.test.splitnavigation.R
+import pl.prucia.test.splitnavigation.ui.BaseActivity
+import pl.prucia.test.splitnavigation.ui.BaseFragment
+import pl.prucia.test.splitnavigation.ui.layout.AppBarConfig
 
-class MagentaFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = MagentaFragment()
-    }
+class MagentaFragment : BaseFragment() {
 
     private lateinit var viewModel: MagentaViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_magenta, container, false)
+    override fun provideLayout() = R.layout.fragment_magenta
+
+    override fun provideAppBarConfig() = AppBarConfig.Builder()
+            .initWithActivity(activity as BaseActivity)
+            .setActivityAppBarVisibility(View.GONE)
+            .build()
+
+    override fun initDataProviders() {
+        viewModel = ViewModelProviders.of(this).get(MagentaViewModel::class.java)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MagentaViewModel::class.java)
+    companion object {
+        fun newInstance() = MagentaFragment()
     }
 }
