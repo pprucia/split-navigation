@@ -7,7 +7,7 @@ import kotlinx.android.synthetic.main.fragment_blue.*
 import pl.prucia.test.splitnavigation.R
 import pl.prucia.test.splitnavigation.ui.BaseActivity
 import pl.prucia.test.splitnavigation.ui.BaseFragment
-import pl.prucia.test.splitnavigation.ui.layout.AppBarConfig
+import pl.prucia.test.splitnavigation.ui.layout.UIConfig
 
 class BlueFragment : BaseFragment() {
 
@@ -20,7 +20,7 @@ class BlueFragment : BaseFragment() {
         mixBlueGreen.setOnClickListener(View.OnClickListener(this::mixWithGreen))
     }
 
-    override fun provideAppBarConfig() = AppBarConfig((activity as BaseActivity).provideAppBarConfig())
+    override fun provideUIConfig() = UIConfig((activity as BaseActivity).provideUIConfig())
             .modifyAppBarVisibility(View.GONE, null)
 
     override fun initDataProviders() {

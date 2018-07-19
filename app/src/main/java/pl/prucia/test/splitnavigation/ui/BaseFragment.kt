@@ -5,10 +5,10 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import pl.prucia.test.splitnavigation.ui.layout.AppBarConfig
+import pl.prucia.test.splitnavigation.ui.layout.UIConfig
 import pl.prucia.test.splitnavigation.ui.layout.UIProvider
 
-abstract class BaseFragment : Fragment(), UIProvider, AppBarConfig.Provider {
+abstract class BaseFragment : Fragment(), UIProvider, UIConfig.Provider {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(provideLayout(), container, false)
@@ -21,11 +21,11 @@ abstract class BaseFragment : Fragment(), UIProvider, AppBarConfig.Provider {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        setupAppBar(provideAppBarConfig())
+        setupAppBar(provideUIConfig())
         initDataProviders()
     }
 
-    private fun setupAppBar(config: AppBarConfig) {
+    private fun setupAppBar(config: UIConfig) {
         config.activityAppBar?.apply {
             visibility = config.activityAppBarVisibility
         }

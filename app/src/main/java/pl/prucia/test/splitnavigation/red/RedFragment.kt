@@ -7,7 +7,7 @@ import kotlinx.android.synthetic.main.fragment_red.*
 import pl.prucia.test.splitnavigation.R
 import pl.prucia.test.splitnavigation.ui.BaseActivity
 import pl.prucia.test.splitnavigation.ui.BaseFragment
-import pl.prucia.test.splitnavigation.ui.layout.AppBarConfig
+import pl.prucia.test.splitnavigation.ui.layout.UIConfig
 
 class RedFragment : BaseFragment() {
 
@@ -20,7 +20,7 @@ class RedFragment : BaseFragment() {
         mixRedBlue.setOnClickListener(View.OnClickListener(this::mixWithBlue))
     }
 
-    override fun provideAppBarConfig() = AppBarConfig((activity as BaseActivity).provideAppBarConfig())
+    override fun provideUIConfig() = UIConfig((activity as BaseActivity).provideUIConfig())
 
     override fun initDataProviders() {
         viewModel = ViewModelProviders.of(this).get(RedViewModel::class.java)

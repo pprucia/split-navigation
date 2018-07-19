@@ -11,7 +11,7 @@ import androidx.navigation.ui.setupWithNavController
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_default_appbar.*
 import pl.prucia.test.splitnavigation.ui.BaseActivity
-import pl.prucia.test.splitnavigation.ui.layout.AppBarConfig
+import pl.prucia.test.splitnavigation.ui.layout.UIConfig
 
 class MainActivity : BaseActivity() {
 
@@ -19,7 +19,7 @@ class MainActivity : BaseActivity() {
 
     override fun provideLayout() = R.layout.activity_main
 
-    override fun provideAppBarConfig() = AppBarConfig(
+    override fun provideUIConfig() = UIConfig(
             activityAppBar = appbar_default,
             activityAppBarVisibility = View.VISIBLE,
             activityToolbar = toolbar_default
