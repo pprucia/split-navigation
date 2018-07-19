@@ -12,9 +12,7 @@ class YellowFragment : BaseFragment() {
 
     override fun provideLayout() = R.layout.fragment_yellow
 
-    override fun provideAppBarConfig() = AppBarConfig.Builder()
-            .initWithActivity(activity as BaseActivity)
-            .build()
+    override fun provideAppBarConfig() = AppBarConfig((activity as BaseActivity).provideAppBarConfig())
 
     override fun initDataProviders() {
         viewModel = ViewModelProviders.of(this).get(YellowViewModel::class.java)

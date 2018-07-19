@@ -20,14 +20,11 @@ class GreenFragment : BaseFragment() {
         mixGreenBlue.setOnClickListener(View.OnClickListener(this::mixWithBlue))
     }
 
-    override fun provideAppBarConfig() = AppBarConfig.Builder()
-            .initWithActivity(activity as BaseActivity)
-            .build()
+    override fun provideAppBarConfig() = AppBarConfig((activity as BaseActivity).provideAppBarConfig())
 
     override fun initDataProviders() {
         viewModel = ViewModelProviders.of(this).get(GreenViewModel::class.java)
     }
-
 
     private fun mixWithRed(view: View) {
         view.findNavController().navigate(R.id.action_navigation_tab_green_to_yellowFragment)

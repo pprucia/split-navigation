@@ -7,5 +7,5 @@ interface UIProvider {
     @LayoutRes
     fun provideLayout(): Int
 
-    fun setupLayout() {}
+    fun setupLayout() = Unit
 }

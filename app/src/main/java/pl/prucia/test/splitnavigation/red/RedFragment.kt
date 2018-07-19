@@ -20,9 +20,7 @@ class RedFragment : BaseFragment() {
         mixRedBlue.setOnClickListener(View.OnClickListener(this::mixWithBlue))
     }
 
-    override fun provideAppBarConfig() = AppBarConfig.Builder()
-        .initWithActivity(activity as BaseActivity)
-        .build()
+    override fun provideAppBarConfig() = AppBarConfig((activity as BaseActivity).provideAppBarConfig())
 
     override fun initDataProviders() {
         viewModel = ViewModelProviders.of(this).get(RedViewModel::class.java)
