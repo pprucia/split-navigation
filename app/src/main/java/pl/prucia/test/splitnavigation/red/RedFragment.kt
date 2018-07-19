@@ -22,7 +22,6 @@ class RedFragment : BaseFragment() {
 
     override fun provideAppBarConfig() = AppBarConfig.Builder()
         .initWithActivity(activity as BaseActivity)
-        .setActivityAppBarVisibility(View.VISIBLE)
         .build()
 
     override fun initDataProviders() {
