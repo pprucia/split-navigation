@@ -1,6 +1,7 @@
 package pl.prucia.test.splitnavigation.magenta
 
 import android.arch.lifecycle.ViewModelProviders
+import android.os.Bundle
 import android.view.View
 import pl.prucia.test.splitnavigation.R
 import pl.prucia.test.splitnavigation.ui.BaseActivity
@@ -16,7 +17,7 @@ class MagentaFragment : BaseFragment() {
     override fun provideUIConfig() = UIConfig((activity as BaseActivity).provideUIConfig())
             .modifyAppBarVisibility(View.GONE, null)
 
-    override fun initDataProviders() {
+    override fun initDataProviders(arguments: Bundle?) {
         viewModel = ViewModelProviders.of(this).get(MagentaViewModel::class.java)
     }
 

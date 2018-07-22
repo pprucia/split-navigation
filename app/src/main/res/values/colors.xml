@@ -4,6 +4,12 @@
     <color name="colorPrimaryDark">#455A64</color>
     <color name="colorAccent">#37474F</color>
 
+    <color name="statusBarDefault">@color/colorPrimaryDark</color>
+    <color name="navigationBarDefault">@color/black</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
     <color name="red">#DD3333</color>
     <color name="green">#33DD33</color>
     <color name="blue">#3333DD</color>

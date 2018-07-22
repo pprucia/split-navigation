@@ -1,5 +1,6 @@
 package pl.prucia.test.splitnavigation
 
+import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.layout_default_appbar.*
 import pl.prucia.test.splitnavigation.ui.BaseActivity
@@ -15,8 +16,7 @@ class TextActivity : BaseActivity() {
             activityToolbar = toolbar_default
     )
 
-    override fun setupLayout() {
-        super.setupLayout()
+    override fun setupLayout(savedInstanceState: Bundle?) {
         supportActionBar?.setTitle(R.string.text_title)
     }
 }

@@ -1,6 +1,7 @@
 package pl.prucia.test.splitnavigation
 
 import android.content.Intent
+import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -25,7 +26,7 @@ class MainActivity : BaseActivity() {
             activityToolbar = toolbar_default
     )
 
-    override fun setupLayout() {
+    override fun setupLayout(savedInstanceState: Bundle?) {
         navController = findNavController(R.id.navHost)
         setupActionBarWithNavController(navController)
 

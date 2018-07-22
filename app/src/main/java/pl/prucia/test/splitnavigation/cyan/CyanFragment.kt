@@ -1,6 +1,7 @@
 package pl.prucia.test.splitnavigation.cyan
 
 import android.arch.lifecycle.ViewModelProviders
+import android.os.Bundle
 import pl.prucia.test.splitnavigation.R
 import pl.prucia.test.splitnavigation.ui.BaseActivity
 import pl.prucia.test.splitnavigation.ui.BaseFragment
@@ -14,7 +15,7 @@ class CyanFragment : BaseFragment() {
 
     override fun provideUIConfig() = UIConfig((activity as BaseActivity).provideUIConfig())
 
-    override fun initDataProviders() {
+    override fun initDataProviders(arguments: Bundle?) {
         viewModel = ViewModelProviders.of(this).get(CyanViewModel::class.java)
     }
 

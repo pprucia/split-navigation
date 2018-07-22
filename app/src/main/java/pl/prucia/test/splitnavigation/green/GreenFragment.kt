@@ -1,6 +1,7 @@
 package pl.prucia.test.splitnavigation.green
 
 import android.arch.lifecycle.ViewModelProviders
+import android.os.Bundle
 import android.view.View
 import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.fragment_green.*
@@ -15,14 +16,15 @@ class GreenFragment : BaseFragment() {
 
     override fun provideLayout() = R.layout.fragment_green
 
-    override fun setupLayout() {
+    override fun provideUIConfig() = UIConfig((activity as BaseActivity).provideUIConfig())
+        .setBackActionVisibility(false)
+
+    override fun setupLayout(savedInstanceState: Bundle?) {
         mixGreenRed.setOnClickListener(View.OnClickListener(this::mixWithRed))
         mixGreenBlue.setOnClickListener(View.OnClickListener(this::mixWithBlue))
     }
 
-    override fun provideUIConfig() = UIConfig((activity as BaseActivity).provideUIConfig())
-
-    override fun initDataProviders() {
+    override fun initDataProviders(arguments: Bundle?) {
         viewModel = ViewModelProviders.of(this).get(GreenViewModel::class.java)
     }
 
