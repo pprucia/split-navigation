@@ -87,6 +87,40 @@ jobs:
           destination: reports/tests/unit/debug
 
 
+  build_snapshot:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/workspace
+      - restore_cache:
+          key: deps-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+      - run:
+          name: Build debug apk
+          command: ./gradlew assembleSnapshot
+      - run:
+          name: Rename snapshot artifacts
+          command: |
+            cd app/build/outputs/apk/snapshot/
+            mv app-snapshot.apk split-navigation-${CIRCLE_BUILD_NUM}_${CIRCLE_SHA1}.apk
+            mv output.json output-${CIRCLE_SHA1}.json
+      - persist_to_workspace:
+          root: .
+          paths:
+            - build/
+            - app/build/
+
+
+  deploy_snapshot:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/workspace
+      - store_artifacts:
+          path: app/build/outputs/apk/snapshot/
+          destination: artifacts/snapshot
+      # todo publish to google play internal / fabric / ...
+
+
   approve:
     <<: *defaults
     steps:
@@ -100,7 +134,10 @@ workflows:
   # any commit
   build_and_test:
     jobs:
-      - checkout_code
+      - checkout_code:
+          filters:
+            branches:
+              ignore: master
       - cache_dependencies:
           requires:
             - checkout_code
@@ -117,3 +154,42 @@ workflows:
           requires:
             - code_check
             - test_debug
+
+
+  # after merge to master
+  snapshot:
+    jobs:
+      - checkout_code:
+          filters:
+            branches:
+              only: master
+      - cache_dependencies:
+          requires:
+            - checkout_code
+      - code_check:
+          requires:
+            - cache_dependencies
+      - build_snapshot:
+          requires:
+            - cache_dependencies
+      # todo: testing
+      - deploy_snapshot:
+          requires:
+            - code_check
+            - build_snapshot
+      - approve:
+          requires:
+            - deploy_snapshot
+
+
+  # todo release
+  # only commits market with a release tag
+#  release:
+#    jobs:
+#      - checkout_code:
+#          filters:
+#            tags:
+#              only: /release/*
+#      - code_check
+#      - build_release
+#      - deploy
