@@ -20,6 +20,8 @@ class MainActivity : BaseActivity() {
 
     override fun provideLayout() = R.layout.activity_main
 
+    override fun navControllerId() = R.id.navHost
+
     override fun provideUIConfig() = UIConfig(
             activityAppBar = appbar_default,
             activityAppBarVisibility = View.VISIBLE,
@@ -27,7 +29,7 @@ class MainActivity : BaseActivity() {
     )
 
     override fun setupLayout(savedInstanceState: Bundle?) {
-        navController = findNavController(R.id.navHost)
+        navController = findNavController(navControllerId())
         setupActionBarWithNavController(navController)
 
         bottomNavigation.setupWithNavController(navController)

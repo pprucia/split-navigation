@@ -13,6 +13,8 @@ import pl.prucia.test.splitnavigation.ui.layout.UIProvider
 
 abstract class BaseFragment : Fragment(), UIProvider, UIConfig.Provider {
 
+    override fun navControllerId() = (activity as BaseActivity).navControllerId()
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(provideLayout(), container, false)
     }

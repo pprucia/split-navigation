@@ -10,6 +10,8 @@ class TextActivity : BaseActivity() {
 
     override fun provideLayout() = R.layout.activity_text
 
+    override fun navControllerId() = -1
+
     override fun provideUIConfig() = UIConfig(
             activityAppBar = appbar_default,
             activityAppBarVisibility = View.GONE,
