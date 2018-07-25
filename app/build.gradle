@@ -55,3 +55,8 @@ dependencies {
     implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha04"
     implementation "android.arch.navigation:navigation-ui-ktx:1.0.0-alpha04"
 }
+
+ktlint {
+    android = true
+    reporters = ["PLAIN_GROUP_BY_FILE"]
+}
