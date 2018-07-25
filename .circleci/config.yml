@@ -63,6 +63,16 @@ jobs:
       - run:
           name: Build debug apk
           command: ./gradlew assembleDebug
+      - run:
+          name: Rename debug artifact
+          command: |
+            export CIRCLE_SHA1_SHORT=$(echo $CIRCLE_SHA1 | cut -c -7)
+            cd app/build/outputs/apk/debug/
+            mv app-debug.apk split-navigation-debug-${CIRCLE_BUILD_NUM}_${CIRCLE_SHA1_SHORT}.apk
+            mv output.json output-debug-${CIRCLE_BUILD_NUM}_${CIRCLE_SHA1_SHORT}.json
+      - store_artifacts:
+          path: app/build/outputs/apk/debug/
+          destination: artifacts/debug
       - persist_to_workspace:
           root: .
           paths:
