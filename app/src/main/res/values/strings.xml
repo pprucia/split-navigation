@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">SplitNavigation</string>
 
 
@@ -17,7 +17,7 @@
 
     <string name="manu_text_title">Show text</string>
     <string name="text_title">Long text</string>
-    <string name="text">
+    <string name="text" tools:ignore="Typos">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris imperdiet ex non fringilla auctor. Donec
         tristique metus et dui rhoncus, ac convallis risus iaculis. Pellentesque sodales eros eu justo consequat, eget
         dictum nunc consectetur. Donec a metus at neque luctus sodales. Mauris vitae massa placerat sem efficitur
