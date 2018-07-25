@@ -28,11 +28,11 @@ class RedFragment : BaseFragment() {
     }
 
     private fun mixWithGreen(view: View) {
-        view.findNavController().navigate(R.id.action_navigation_tab_red_to_yellowFragment)
+        activity?.findNavController(navControllerId())?.navigate(R.id.action_navigation_tab_red_to_yellowFragment)
     }
 
     private fun mixWithBlue(view: View) {
-        view.findNavController().navigate(R.id.action_navigation_tab_red_to_magentaFragment)
+        activity?.findNavController(navControllerId())?.navigate(R.id.action_navigation_tab_red_to_magentaFragment)
     }
 
     companion object {
