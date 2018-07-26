@@ -8,6 +8,7 @@
     <color name="statusBarDefault">@color/colorPrimaryDark</color>
     <color name="navigationBarDefault">@color/black</color>
 
+    <color name="white">#FFFFFF</color>
     <color name="grey_50">#FAFAFA</color>
     <color name="black">#000000</color>
 
@@ -18,5 +19,7 @@
     <color name="cyan">#33DDDD</color>
     <color name="magenta">#DD33DD</color>
     <color name="yellow">#DDDD33</color>
+
+    <color name="orange">#F57C00</color>
 
 </resources>

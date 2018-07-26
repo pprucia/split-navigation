@@ -1,5 +1,6 @@
 package pl.prucia.test.splitnavigation.ui.layout
 
+import android.annotation.SuppressLint
 import android.support.annotation.ColorRes
 import android.support.design.widget.AppBarLayout
 import android.support.v7.widget.Toolbar
@@ -68,7 +69,7 @@ class UIConfig(
     }
 
     enum class Style {
-        COLORED, TRANSPARENT_NO_LIMITS;
+        COLORED, TRANSPARENT_NO_LIMITS, TRANSPARENT_STATUS;
 
         @ColorRes
         var statusBarBackground: Int = R.color.statusBarDefault
@@ -102,5 +103,10 @@ class UIConfig(
             navigationBarBackground = navigationBar
             return this
         }
+    }
+
+    companion object {
+        @SuppressLint("StaticFieldLeak")
+        val DEFAULTS = UIConfig()
     }
 }
