@@ -62,6 +62,14 @@ android {
         }
     }
 
+    flavorDimensions "app"
+    productFlavors {
+        split_navigation {
+            dimension "app"
+            applicationId "pl.prucia.test.splitnavigation"
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
